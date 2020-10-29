@@ -28,14 +28,21 @@ main {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .perfil {
   width: 50%;
   padding-top: 50px;
-  color: #fff;
-  background-color: #8841da;
+  background-color: #f1f1f1;
+}
+
+.perfil__nombre, .perfil__minibio h2 {
+  color: #8841da;
+}
+
+.perfil__titulo, .perfil__minibio h3 {
+  color: #3f579a;
 }
 
 .perfil__avatar {
@@ -64,7 +71,7 @@ main {
   width: 100px;
   height: 40px;
   margin: 15px auto;
-  padding-top: 15px;
+  padding-top: 7px;
   border-radius: 20px;
   text-decoration: none;
   text-align: center;
@@ -163,10 +170,10 @@ main {
 
 .galeria__foto-principal {
   float: left;
-  margin-left: 10px;
+  margin-right: 5px;
 }
 
-.galeria__fotos-adicionales {
+.galeria__fotos-adicionales img {
   height: 70px;
   margin-right: 5px;
   margin-bottom: 5px;

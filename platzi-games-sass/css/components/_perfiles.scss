@@ -1,8 +1,7 @@
 .perfil {
   width: 50%;
   padding-top: 50px;
-  color: $color-claro;
-  background-color: $color-secundario;
+  @include dark-mode;
   &__avatar {
     display: block;
     margin: 0 auto;
@@ -25,7 +24,7 @@
     width: 100px;
     height: 40px;
     margin: 15px auto;
-    padding-top: 15px;
+    padding-top: 7px;
     border-radius: 20px;
     text-decoration: none;
     text-align: center;
