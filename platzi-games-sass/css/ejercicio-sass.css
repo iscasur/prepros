@@ -42,7 +42,12 @@ main {
 }
 
 .perfil__titulo, .perfil__minibio h3 {
-  color: #3f579a;
+  color: #3f579a !important;
+}
+
+.perfil__boton {
+  background-color: #333333;
+  border: 2px solid white;
 }
 
 .perfil__avatar {
@@ -78,8 +83,6 @@ main {
   color: #fff;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
-  background-color: rgba(51, 51, 51, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .perfil__minibio {
@@ -192,13 +195,22 @@ main {
 }
 
 .articulos {
-  width: 40%;
-  padding: 50px 0 0 50px;
+  width: 50%;
+  padding: 50px 50px 0;
+  background-color: #333;
 }
 
 .articulo {
   margin-bottom: 75px;
   border-bottom: 3px solid #8841da;
+}
+
+.articulo__titulo {
+  color: #f1f1f1;
+}
+
+.articulo__descripcion {
+  color: #f1f1f1;
 }
 
 .articulo__categoria {

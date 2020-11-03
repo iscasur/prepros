@@ -7,6 +7,10 @@ $color-secundario: #8841da;
 $color-variacion: #3f579a;
 $dark-mode: true;
 
+@function get-opacity($color, $nivel) {
+  @return rgba($color, $nivel);
+}
+
 @mixin caja {
   border-radius: 20px;
   box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.25);
@@ -23,23 +27,44 @@ $dark-mode: true;
   }
 }
 
-@mixin dark-mode {
+@mixin profile-dark-mode {
   @if $dark-mode {
     background-color: $color-primario-dark;
     &__nombre {
       color: $color-secundario;
     }
     &__titulo {
-      color: $color-variacion;
+      color: $color-variacion !important;
+    }
+    &__boton {
+      background-color: get-opacity($color-primario, 1);
+      border: 2px solid get-opacity($color-claro, 1);
     }
   } @else {
     color: $color-claro;
     background-color: $color-secundario;
+    &__boton {
+      background-color: get-opacity($color-primario, 0.2);
+      border: 2px solid get-opacity($color-claro, 0.3);
+    }
   }
 }
 
-@function get-opacity($color, $nivel) {
-  @return rgba($color, $nivel);
+@mixin articles-dark-mode {
+  @if $dark-mode {
+    background-color: $color-primario;
+  }
+}
+
+@mixin article-dark-mode {
+  @if $dark-mode {
+    &__titulo {
+      color: $color-primario-dark;
+    }
+    &__descripcion {
+      color: $color-primario-dark;
+    }
+  }
 }
 
 @each $header, $size in (h1: 30px, h2: 25px, h3: 20px) {

@@ -1,7 +1,7 @@
 .perfil {
   width: 50%;
   padding-top: 50px;
-  @include dark-mode;
+  @include profile-dark-mode;
   &__avatar {
     display: block;
     margin: 0 auto;
@@ -30,8 +30,6 @@
     text-align: center;
     color: $color-claro;
     @include titulos($fuente2);
-    background-color: get-opacity($color-primario, 0.2);
-    border: 2px solid get-opacity($color-claro, 0.3);
   }
 }
 

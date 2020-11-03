@@ -1,11 +1,13 @@
 .articulos {
-  width: 40%;
-  padding: 50px 0 0 50px;
+  width: 50%;
+  padding: 50px 50px 0;
+  @include articles-dark-mode;
 }
 
 .articulo {
   margin-bottom: 75px;
   border-bottom: 3px solid $color-secundario;
+  @include article-dark-mode;
   &__categoria {
     font-weight: 500;
     font-size: 16px;
